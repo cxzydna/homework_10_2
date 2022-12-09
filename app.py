@@ -1,5 +1,8 @@
-from utils import get_all, load_candidates, get_by_pk, get_by_skill
+# Importing the flask
 from flask import Flask
+
+# Importing the necessary functions for the program to work
+from utils import get_all, load_candidates, get_by_pk, get_by_skill
 
 data = load_candidates()
 
