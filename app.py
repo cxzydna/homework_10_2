@@ -24,6 +24,8 @@ def main_page():
 @app.route('/candidates/<int:uid>')
 def candidate_page(uid):
     candidate = get_by_pk(uid, data)
+    if not candidate:
+        return 'Кандидат не найден'
     url = candidate["picture"]
     result = f'<br>' \
              f'<img src="{url}"<br>' \
